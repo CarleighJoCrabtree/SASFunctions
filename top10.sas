@@ -177,6 +177,7 @@ data prx;
 run;
 
 /* Create data */
+
 proc sql outobs=5;
 create table topten.nameFix as
 select distinct customer_name
@@ -187,6 +188,8 @@ data removeTitles;
 	set nameFix;
 /*  Swap Last, Title. First to First Last removing title and comma */
 	ProperName=prxchange('s/(\w+), (?:\w+\.\s)?(\w+)/$2 $1/', -1, customer_name);
+	
 /*  Swap Last, Title. First to Title. First Last keeping title and removing comma */
 	ProperName2=prxchange('s/(\w+), (\w+\.\s)?(\w+)/$2 $3 $1/', -1, customer_name);
 run;
+
