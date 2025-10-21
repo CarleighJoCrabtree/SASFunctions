@@ -14,7 +14,8 @@ The data used include the following:
 
 The programs used include the following:
 - top10.sas : This is the primary program used in the presentation.
-              *Before running code, update the libname statement to use the path to the data once you have downloaded it.
+
+   *Before running code, update the libname statement to use the path to the data once you have downloaded it.
 - charCheck.sas and charResize.sas : These programs contain macro definitions and calls to demonstrate how to update character column length.
 
 Additional materials:
